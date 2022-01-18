@@ -1,0 +1,12 @@
+#root, body, html{
+    height:100%;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Azeret+Mono:wght@900&family=Jockey+One&family=Merriweather+Sans:wght@500&family=Poppins:wght@300&family=Ruslan+Display&display=swap');
+
+body{
+    background: rgb(17, 15, 15);
+    background-size: cover;
+
+
+}
