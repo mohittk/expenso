@@ -12,7 +12,8 @@ import {
 import useStyles from "./style";
 import {useState, useContext} from "react";
 import {v4 as uuidv4} from 'uuid';
-import {ExpenseTrackerContext} from  '../../../context/context'
+import {ExpenseTrackerContext} from  '../../../context/context';
+import {incomeCategories, expenseCategories} from '../../../constants/categories';
 
 const initialState = {
   amount: '',
@@ -34,6 +35,8 @@ const Form = () => {
       setFormData(initialState);
 
     }
+
+    const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
 
     console.log(formData);
   return (
@@ -57,8 +60,13 @@ const Form = () => {
             <FormControl fullWidth>
                 <InputLabel>Category</InputLabel>
                 <Select value={formData.category} onChange={(e) => setFormData({...formData, category: e.target.value})}> 
-                    <MenuItem value="business">business</MenuItem>
-                    <MenuItem value="salary">Salary</MenuItem>
+                {selectedCategories.map((c)=>{
+                  return(
+                  <MenuItem key={c.type} value={c.type}> {c.type}</MenuItem>
+                  )
+                })}
+                    {/* <MenuItem value="business">business</MenuItem>
+                    <MenuItem value="salary">Salary</MenuItem> */}
                     
                 </Select>
             </FormControl>
