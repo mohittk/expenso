@@ -12,10 +12,10 @@ const Details = ({title}) =>{
 
 
     return(
-    <Card className={title === 'Income' ? classes.income : classes.expense}>
-        <CardHeader title={title} />
+    <Card className={title === 'Income' ? classes.income : classes.expense} style={{backgroundImage: 'linear-gradient(147deg, #000000 0%, #2c3e50 74%)'}}>
+        <CardHeader style={{color: 'white'}} title={title} />
         <CardContent>
-            <Typography variant="h5">${total}</Typography>
+            <Typography style={{color: 'white'}} variant="h5">Rs {total}</Typography>
             {/* <Doughnut data= {chartData} /> */}
         </CardContent>
     </Card>
@@ -24,3 +24,10 @@ const Details = ({title}) =>{
 }
 
 export default Details;
+
+// background-color: #000000;
+// background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+
+// background-color: #000000;
+// background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+

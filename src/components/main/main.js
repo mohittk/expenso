@@ -12,16 +12,16 @@ const Main = () =>{
     
     return(
         <>
-        <Card className={classes.root}>
+        <Card className={classes.root} style={{backgroundImage: 'linear-gradient(147deg, #000000 0%, #2c3e50 74%)', color: 'white'}}>
             <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
             <CardContent>
-                <Typography align="center" variant="h5">
-                    total balance 100$
+                <Typography style={{color: 'white'}} align="center" variant="h5">
+                    total balance: paisa nhi hai
                 </Typography>
 
-                <Typography variant="subtitle1" style={{lineHeight: '1.5em', marginTop: '20px'}}>
+                {/* <Typography variant="subtitle1" style={{lineHeight: '1.5em', marginTop: '20px'}}>
                     Try saying: Add income for 100$ in category salary for Monday...
-                </Typography>
+                </Typography> */}
                 <Divider />
                 <Form />
 
