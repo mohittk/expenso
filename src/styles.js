@@ -27,4 +27,9 @@ export default makeStyles((theme) => ({
       margin: theme.spacing(2),
     },
   },
+
+  font:{
+    fontWeight: '800'
+  }
+
 }));

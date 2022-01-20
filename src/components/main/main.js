@@ -1,22 +1,26 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Card, CardContent, CardHeader, Typography, Grid, Divider} from '@material-ui/core';
 import useStyles from './style';
 import Form from './form/form';
 import List from './lists/list';
 import {ExpenseTrackerContext} from '../../context/context';
 
+
 const Main = () =>{
     const classes = useStyles();
-    const globalState = useContext(ExpenseTrackerContext);
-    console.log(globalState);
+    const {balance} = useContext(ExpenseTrackerContext);
+
+    
+   
+
     
     return(
         <>
-        <Card className={classes.root} style={{backgroundImage: 'linear-gradient(147deg, #000000 0%, #2c3e50 74%)', color: 'white'}}>
-            <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
+        <Card className={classes.root} style={{backgroundImage: 'linear-gradient(315deg, #130f40 0%, #000000 74%)', color: 'white'}}>
+            <CardHeader titleTypographyProps={{variant: 'h4'}}  style={{textAlign: 'center'}}title="Expense Tracker"  />
             <CardContent>
                 <Typography style={{color: 'white'}} align="center" variant="h5">
-                    total balance: paisa nhi hai
+                    Total Balance - Rs {balance}
                 </Typography>
 
                 {/* <Typography variant="subtitle1" style={{lineHeight: '1.5em', marginTop: '20px'}}>

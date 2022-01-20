@@ -12,6 +12,9 @@ export default makeStyles(()=>({
         color: 'white',
         borderColor: 'white',
     },
+    labelcustom:{
+        borderColor: 'white',
+    },
 
     other:{
         color: 'white'
