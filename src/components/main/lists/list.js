@@ -27,7 +27,7 @@ const List = () =>{
                         <ListItemText  primary={transaction.category} secondary={<Typography style={{color: 'white'}}>Rs {transaction.amount} - {transaction.date}</Typography>} />
                         <ListItemSecondaryAction > 
                             <IconButton edge="end" aria-label="delete" onClick={()=> deleteTrans(transaction.id)}>
-                                <Delete />
+                                <Delete style={{color: 'white'}}/>
                             </IconButton>
                         </ListItemSecondaryAction>
                     </ListItem>

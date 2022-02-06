@@ -44,15 +44,18 @@ const Form = () => {
 
     const classes = useStyles();
     const [formData, setFormData] = useState(initialState);
+    const {balance} = useContext(ExpenseTrackerContext);
 
     const {addTrans} = useContext(ExpenseTrackerContext);
 
     const createTrans = () =>{
+     
+      
 
       const transaction = { ...formData, amount:Number(formData.amount), id: uuidv4()}
       addTrans(transaction);
       setFormData(initialState);
-      
+     
 
     }
 
@@ -69,7 +72,7 @@ const Form = () => {
         </Grid>
         <Grid item xs={6}>
             <FormControl  fullWidth>
-                <InputLabel style={{color: 'white'}} >Type</InputLabel>
+                <InputLabel className={classes.labelcustom} style={{color: 'white'}} >Type</InputLabel>
                 <Select style={{color: 'white'}} value={formData.type} onChange={(e) => setFormData({ ...formData, type: e.target.value})}>
                     <MenuItem value="Income"  >Income</MenuItem>
                     <MenuItem value="Expense">Expense</MenuItem>
