@@ -3,7 +3,7 @@ import {Grid} from '@material-ui/core';
 import Details from './components/details/details';
 import useStyles from './styles';
 import Main from './components/main/main';
-import ('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Jockey+One&family=Merriweather+Sans:wght@500&family=Poppins:wght@300&family=Ruslan+Display&display=swap');
+// import ('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Jockey+One&family=Merriweather+Sans:wght@500&family=Poppins:wght@300&family=Ruslan+Display&display=swap');
 
 const App = () =>{
     const classes = useStyles();
